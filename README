@@ -1,0 +1,10 @@
+PdfRename(PR) is a tool to rename scholar pdf with its title. 
+PR use apache pdfbox to implement the function.
+
+Library Depdency:
+	Java
+	C# Runtime
+	apache PdfBox (included)
+
+Usage:
+	pdfrename [file | path]
