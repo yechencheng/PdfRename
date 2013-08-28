@@ -5,7 +5,7 @@ using System.Diagnostics;
 namespace PdfRename
 {
 	public class Base
-	{
+	{  
 		protected bool GetVerify()
 		{
 			while (true) {
