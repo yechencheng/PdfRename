@@ -33,10 +33,12 @@ namespace PdfRename
 
 		public bool ProcessRename()
 		{
-			if (!Verify (Source.FullName, Title))
-				return false;
 			Target = Source.DirectoryName + "/" + Title + ".pdf";
-			if (File.Exists (Target))
+			if (File.Exists (Target)) {
+				Console.WriteLine (Source.FullName + "\n\tto " + Title + " Existed");
+				return false;
+			}
+			if (!Verify (Source.FullName, Title))
 				return false;
 			File.Move (Source.FullName, Target);
 			File.SetLastWriteTime(Target, DateTime.Now);
